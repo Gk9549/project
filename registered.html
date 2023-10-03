@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registered Users</title>
+    <style>
+        body {
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+            padding: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        li {
+            background-color: #fff;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 3px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Registered Users</h1>
+    <ul>
+        {% for user in registered_users %}
+        <li>{{ user[0] }} - {{ user[1] }}</li>
+        {% endfor %}
+    </ul>
+    <a href="register.html">Register for the event</a>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registered Users</title>
+    <style>
+        body {
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+            padding: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        li {
+            background-color: #fff;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 3px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        /* Marquee styles */
+        .colorful-marquee {
+            background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="colorful-marquee">
+        <marquee behavior="scroll" direction="left" scrollamount="8">
+            Welcome to the Event Registration Page! Register now to join the excitement.
+        </marquee>
+    </div>
+
+    <h1>Registered Users</h1>
+    <ul>
+        {% for user in registered_users %}
+        <li>{{ user[0] }} - {{ user[1] }}</li>
+        {% endfor %}
+    </ul>
+    <a href="/">Register for the event</a>
+</body>
+</html>

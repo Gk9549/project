@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Registration</title>
+    <style>
+        body {
+            background-color: f4f4f4;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+            padding: 20px;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            width: 300px;
+            margin: 0 auto;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        /* Marquee styles */
+        .colorful-marquee {
+            background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .rotating-marquee {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="colorful-marquee">
+        <marquee behavior="scroll" direction="left" scrollamount="8">
+            Welcome to the Event Registration Page! Register now to join the excitement.
+        </marquee>
+    </div>
+
+    <h1>Event Registration</h1>
+    <form method="post">
+        <label>Name: <input type="text" name="name"></label><br>
+        <label>Email: <input type="email" name="email"></label><br>
+        <input type="submit" value="Register">
+    </form><br><br>
+   <center><button> <a href="/view-registered">View Registered Users</a>
+</button></center>
+    
+        
+    </div>
+</body>
+</html>
